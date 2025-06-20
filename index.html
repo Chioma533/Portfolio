@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queen's Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <!-- <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "nQ1fv-w8BLyrpfQtH",
+        });
+      })();
+    </script> -->
+  </head>
+  <body>
+    <header class="navigation">
+      <div class="logo">
+        <span>&lt;Queen <span style="color: #10b981">Designz</span>/&gt;</span>
+      </div>
+
+      <nav class="navigation_nav desktop-nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav">
+        <span class="close-mobile-nav" id="close-mobile-nav">&times;</span>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Modal Navigation -->
+    <div id="navModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">×</span>
+        <nav class="modal-nav">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Projects</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <section class="Hero" id="Home">
+      <div class="Hero-txt">
+        <h1>
+          Hi There, <br />I'm Queen
+          <span>Michael</span>
+        </h1>
+        <h3>I'm a Web Developer and Designer</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolorem
+          explicabo totam libero atque ex ipsum dolor rem, laboriosam quod
+          accusamus esse dicta perferendis sapiente molestias fugit a illo quas.
+        </p>
+        <button class="btn">Download CV</button>
+      </div>
+      <div class="hero-images">
+        <div class="my_pic">
+          <img src="/assets/images/my_pic.png" alt="Image" class="main-pic" />
+          <img
+            src="/assets/images/React.png"
+            class="tech-icon react-icon"
+            alt="React Logo"
+          />
+          <img
+            src="/assets/images/Tailwind Css.png"
+            class="tech-icon tailwind-icon"
+            alt="Tailwind Logo"
+          />
+          <img
+            src="/assets/images/NodeLogo.png"
+            class="tech-icon node-icon"
+            alt="Node Logo"
+          />
+        </div>
+        <div class="social_icons">
+          <li><img src="/assets/images/facebook.png" alt="" /></li>
+          <li><img src="/assets/images/linkedin.png" alt="" /></li>
+          <li><img src="/assets/images/instagram.png" alt="" /></li>
+          <li><img src="/assets/images/twitter.png" alt="" /></li>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="About">
+      <div class="about_intro">
+        <h3 style="color: #10b981">ABOUT ME</h3>
+        <h1>Hi i'm Queen Michael</h1>
+        <p>
+          A Full stack developer with expertise in web development, <br />
+          project management and MERN stack
+        </p>
+      </div>
+      <div class="about_con">
+        <div class="about_txt">
+          <h3>My Journey</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
+            architecto magni? Quo voluptatibus tenetur quos quidem, fugiat
+            explicabo amet! Iste debitis voluptatum dolorem officia ipsam,
+            commodi neque ducimus voluptatem molestiae. Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit. Ea ullam facere perspiciatis
+            voluptas debitis enim tempora necessitatibus laborum, sapiente
+            molestias esse, atque excepturi unde, laboriosam fuga illum. Atque,
+            excepturi commodi.
+          </p>
+          <img src="/assets/images/mernstack.png" alt="" />
+        </div>
+        <div class="skill_con">
+          <h3>Skills and Expertise</h3>
+          <div class="skill_content">
+            <div>
+              <img src="/assets/images/Html.png " alt="" />
+              <span> HTML</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/CSS.png " alt="" />
+              <span> CSS</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/JS.png " alt="" />
+              <span> Javascript</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/React.png" alt="" />
+              <span> React</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/Tailwind Css.png" alt="" />
+              <span> Tailwind</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/Bootstrap.png" alt="" />
+              <span>Bootstrap</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/NodeLogo.png" alt="" />
+              <span>NodeJs</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/mongodb.svg" alt="" />
+              <span>MongoDB</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/Express.png" alt="" />
+              <span>Express</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/PhP1.png" alt="" />
+              <span> PHP</span>
+            </div>
+
+            <div>
+              <img src="/assets/images/MySQL.png" alt="" />
+              <span> MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="more_about">
+        <h3>More About Me</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          quis mollitia, esse ullam quisquam numquam neque aliquam similique,
+          vel incidunt error modi facere tenetur laboriosam? Sunt in commodi ea
+          et. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consequatur debitis laborum aliquid magni quae dicta, quisquam veniam
+          natus illum esse. Beatae corrupti fugit quia fugiat laborum harum,
+          quis blanditiis deleniti.
+        </p>
+      </div>
+    </section>
+
+    <section class="project">
+      <div class="project_con">
+        <div class="project_title">
+          <h1>My Project</h1>
+        </div>
+        <div class="project_content">
+          <div class="project_item">
+            <img src="/assets/images/Portfolio.png" alt="" />
+            <div class="project_txt">
+              <h2>Portfolio</h2>
+              <p>
+                Queen Designz did an amazing job on our website. Their
+                Professionalism and dedication to our project were outstanding.
+              </p>
+              <div class="project_btn">
+                <button class="livebtn">Live Preview</button>
+                <button>
+                  <img src="/assets/images/Github.png" alt="" />
+                  <span>Github</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_item">
+            <img src="/assets/images/SpicyBites.png" alt="" />
+            <div class="project_txt">
+              <h2>Linkprosoft</h2>
+              <p>
+                Queen Designz did an amazing job on our website. Their
+                Professionalism and dedication to our project were outstanding.
+              </p>
+              <div class="project_btn">
+                <button class="livebtn">Live Preview</button>
+                <button>
+                  <img src="/assets/images/Github.png" alt="" />
+                  <span>Github</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_item">
+            <img src="/assets/images/Supercar.png" alt="" />
+            <div class="project_txt">
+              <h2>Portfolio</h2>
+              <p>
+                Working with Queen Designz was a seemless experience. They
+                brought our vision to life with a modern and responsive website.
+              </p>
+              <div class="project_btn">
+                <button class="livebtn">Live Preview</button>
+                <button>
+                  <img src="/assets/images/Github.png" alt="" />
+                  <span>Github</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_item">
+            <img src="/assets/images/Webelite.png" alt="" />
+            <div class="project_txt">
+              <h2>Portfolio</h2>
+              <p>
+                Working with Queen Designz was a seamless experience. They
+                brought our vision to life with a modern and responsive website
+              </p>
+              <div class="project_btn">
+                <button class="livebtn">Live Preview</button>
+                <button>
+                  <img src="/assets/images/Github.png" alt="" />
+                  <span>Github</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_item">
+            <img src="/assets/images/SpicyBites.png" alt="" />
+            <div class="project_txt">
+              <h2>RealChat</h2>
+              <p>
+                Working with Queen Designz was a seamless experience. They
+                brought our vision to life with a modern and responsive website.
+              </p>
+              <div class="project_btn">
+                <button class="livebtn">Live Preview</button>
+                <button>
+                  <img src="/assets/images/Github.png" alt="" />
+                  <span>Github</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
+    <section class="Testimonial">
+      <h2>Testimonial</h2>
+      <h1>What Client Say</h1>
+      <div class="section_grid">
+        <div class="section_card">
+          <span><i class='bx  bx-quote-left-alt'  ></i> </span>
+          <h4>Love the simplicity</h4>
+          <p>
+            She understood our brand and created a stunning website design.
+            professional, responsive and on-time delivery.Highly recommended!
+          </p>
+          <img src="/assets/images/profile1.avif" alt="user">
+          <h5>Sandra Morris</h5>
+          <h6>Managing Director</h6>
+        </div>
+
+        <div class="section_card">
+          <span><i class='bx  bx-quote-left-alt'  ></i> </span>
+          <h4>Excellent Designs</h4>
+          <p>
+           Efficient, reliable, and results_oriented. visually appealing 
+           website, improved online visibility.Highly recommended!
+          </p>
+          <img src="/assets/images/profile2.avif" alt="user">
+          <h5>Michael George</h5>
+          <h6>Fashion Designer</h6>
+        </div>
+
+        <div class="section_card">
+          <span><i class='bx  bx-quote-left-alt'  ></i> </span>
+          <h4>Efficient and Reliable</h4>
+          <p>
+            Best decision we made. Stunning website, excepptional support. Always 
+            available and prompt issue resolution. Hassle-free experience!
+          </p>
+          <img src="/assets/images/profile3.avif" alt="user">
+          <h5>Stephen Ikedi</h5>
+          <h6>Ceo & Founder</h6>
+        </div>
+
+      </div>
+    </section> -->
+
+    <section class="Testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="title">What our clients say</h2>
+        </div>
+        <div class="testimonials-content">
+          <div class="swiper testimonials-slider js-testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="/assets/images/profile1.avif" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Pricillia Ojo</h3>
+                    <span class="job">Medical Doctor</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium laboriosam nobis perspiciatis amet neque, sapiente
+                  ea quis voluptate quaerat repellendus.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="/assets/images/profile2.avif" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Moro Bright</h3>
+                    <span class="job">Fashion Designer</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium laboriosam nobis perspiciatis amet neque, sapiente
+                  ea quis voluptate quaerat repellendus.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="/assets/images/profile3.avif" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Stephen Oduali</h3>
+                    <span class="job">Civil Engineer</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium laboriosam nobis perspiciatis amet neque, sapiente
+                  ea quis voluptate quaerat repellendus.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+              <div class="swiper-slide testimonials-item">
+                <div class="info">
+                  <img src="/assets/images/profile1.avif" alt="" />
+                  <div class="text-box">
+                    <h3 class="name">Pricillia Ojo</h3>
+                    <span class="job">Medical Doctor</span>
+                  </div>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Praesentium laboriosam nobis perspiciatis amet neque, sapiente
+                  ea quis voluptate quaerat repellendus.
+                </p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination js-testimonials-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div>
+          <h3>Get in Touch</h3>
+          <p>I'm always open to new opportunities. Feel free to reach out!</p>
+          <div class="contact-icon">
+            <a href="#">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+          <div class="container-mail">
+            <div class="mail">
+              <div class="mail_back"></div>
+              <div class="mail_top"></div>
+              <div class="mail_letter">
+                <div class="mail_letter-square"></div>
+                <div class="mail-letter-lines"></div>
+              </div>
+              <div class="mail_left"></div>
+              <div class="mail_right"></div>
+              <div class="mail_bottom"></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <h3>Contact Me</h3>
+          <form>
+            <div class="form-item">
+              <label>Name</label><br />
+              <input
+                type="text"
+                placeholder="Full Name"
+                name="name"
+                id="name"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Email</label><br />
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Subject</label><br />
+              <input
+                type="text"
+                placeholder="Email subject"
+                name="subject"
+                id="subject"
+                required
+              />
+            </div>
+            <div class="form-item">
+              <label>Message</label><br />
+              <textarea
+                name="message"
+                class="message-box"
+                id="message"
+                required
+              ></textarea>
+            </div>
+            <button class="sendBtn" type="button">
+              <span class="sendBtn--visible">
+                <p>Send Message</p>
+              </span>
+              <span class="sendBtn--invisible">Message sent!</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <script src="" type="text/javascript"></script> -->
+    <script src="/assets/Js/index.js"></script>
+  </body>
+</html>
