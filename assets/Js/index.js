@@ -1,14 +1,26 @@
-const hamburger = document.getElementById("hamburger");
-const mobileNav = document.getElementById("mobile-nav");
-const closeNav = document.getElementById("close-mobile-nav");
-
-hamburger.addEventListener("click", () => {
-  mobileNav.classList.add("active");
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
 
-closeNav.addEventListener("click", () => {
-  mobileNav.classList.remove("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobile-nav");
+  const closeNav = document.getElementById("close-mobile-nav");
+
+  hamburger.addEventListener("click", function () {
+    mobileNav.style.display = "flex";
+  });
+
+  closeNav.addEventListener("click", function () {
+    mobileNav.style.display = "none";
+  });
 });
+
 
 const swiper = new Swiper(".js-testimonials-slider", {
   grabCursor: true,
@@ -18,8 +30,11 @@ const swiper = new Swiper(".js-testimonials-slider", {
     clickable: true,
   },
   breakpoints: {
-    767: {
-      slidesPerView: 3,
+    1024:{
+      slidesPerView:3,
+    },
+    768: {
+      slidesPerView: 2,
     },
     480: {
       slidesPerView: 1, // show 1 testimonial at ≤480px
@@ -27,83 +42,79 @@ const swiper = new Swiper(".js-testimonials-slider", {
   },
 });
 
-(function () {
-  emailjs.init({
-    publicKey: "nQ1fv-w8BLyrpfQtH",
+emailjs.init("nQ1fv-w8BLyrpfQtH");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const btn = document.querySelector(".sendBtn");
+  const mailTop = document.querySelector(".mail_top");
+  const mailLetter = document.querySelector(".mail_letter");
+
+  function setButtonState(state) {
+    if (state === "sending") {
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+    } else if (state === "success") {
+      btn.innerHTML = '<i class="fas fa-check-circle"></i> Message Sent!';
+      setTimeout(() => {
+        btn.innerText = "Send Message";
+        btn.disabled = false;
+      }, 2500);
+    } else {
+      btn.innerText = "Send Message";
+      btn.disabled = false;
+    }
+  }
+
+  btn.addEventListener("click", function () {
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const subject = form.subject.value.trim();
+    const message = form.message.value.trim();
+
+    if (!name || !email || !subject || !message) {
+      Toastify({
+        text: "Please fill out all fields!",
+        duration: 3000,
+        style: { background: "#e74c3c" }, // red
+      }).showToast();
+      return;
+    }
+
+    setButtonState("sending");
+
+    // Send form with EmailJS
+    emailjs
+      .sendForm("service_3kdjn5r", "template_z2m82ir", form)
+      .then(() => {
+        // Toastify success
+        Toastify({
+          text: "Message sent successfully!",
+          duration: 3000,
+          style: { background: "#10b981" }, // green
+        }).showToast();
+
+        // Animate envelope
+        mailTop?.classList.add("closed");
+        mailLetter?.classList.add("move");
+
+        // Reset form after delay
+        setTimeout(() => {
+          form.reset();
+          setButtonState("success");
+          mailTop?.classList.remove("closed");
+          mailLetter?.classList.remove("move");
+          btn.disabled = false;
+        }, 2500);
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        Toastify({
+          text: "Failed to send message. Please try again.",
+          duration: 4000,
+          style: { background: "#e67e22" }, // orange
+        }).showToast();
+        setButtonState();
+      });
   });
-})();
-
-function sendMail() {
-  const parms = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    subject: document.getElementById("subject").value.trim(),
-    message: document.getElementById("message").value.trim(),
-  };
-
-  emailjs
-    .send("service_3kdjn5r", "template_z2m82ir", parms)
-    .then(() => {
-      console.log("Email sent successfully");
-      // Optional: reset form or show success message
-    })
-    .catch((error) => {
-      console.error("Email send failed:", error);
-      // Optional: show error message to user
-    });
-}
-
-$(document).ready(function () {
-  // Handle send button click
-  $(".sendBtn").on("click", function (e) {
-    e.preventDefault(); // Prevent form reload
-    sendMail();
-
-    // Animate envelope
-    $(".mail_letter").toggleClass("move");
-    $(".mail_top").toggleClass("closed");
-    $(".sendBtn--invisible").toggleClass("visible");
-    $(".sendBtn--visible").toggleClass("invisible");
-  });
-
-  // Handle input focus and focusout
-  $("input, textarea")
-    .on("focus", function () {
-      $(this).parent().addClass("active");
-    })
-    .on("blur", function () {
-      if ($(this).val().trim() === "") {
-        $(this).parent().removeClass("active");
-      } else {
-        $(this).parent().addClass("active");
-      }
-    });
 });
-
-// function sendMail() {
-//   let parms = {
-//     name: document.getElementById("name").value,
-//     email: document.getElementById("email").value,
-//     subject: document.getElementById("subject").value,
-//     message: document.getElementById("message").value,
-//   };
-
-//   emailjs.send("service_3kdjn5r", "template_z2m82ir", parms).then();
-// }
-// $(".sendBtn").click(function () {
-//   $(".mail_letter").toggleClass("move");
-//   $(".mail_top").toggleClass("closed");
-//   $(".sendBtn--invisible").toggleClass("visible");
-//   $(".sendBtn--visible").toggleClass("invisible");
-// });
-
-// $("input").focus(function () {
-//   $(this).parent().addClass("active");
-//   $("input").focusout(function () {
-//     if ($(this).val() == "") {
-//       $(this).parent().removeClass("active");
-//     } else {
-//       $(this).parent().addClass("active");
-//     }
-//   });
-// });

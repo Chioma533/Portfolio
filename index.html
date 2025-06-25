@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Queen's Portfolio</title>
+    <title>Queen_Designz</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,93 +17,89 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-    <!-- <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "nQ1fv-w8BLyrpfQtH",
-        });
-      })();
-    </script> -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
   </head>
+
   <body>
-    <header class="navigation">
+ <div class="navigation">
+  <div class="logo">
+    &lt;Queen <span style="color: #10b981">Designz</span>/&gt;
+  </div>
+
+  <!-- Desktop nav -->
+  <nav class="navigation_nav desktop-nav">
+    <a href="#About">About</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Testimonials">Testimonials</a>
+    <a href="#Contact">Contact</a>
+  </nav>
+
+  <!-- Hamburger icon for mobile -->
+  <div class="hamburger" id="hamburger">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Mobile nav dropdown -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-header">
       <div class="logo">
-        <span>&lt;Queen <span style="color: #10b981">Designz</span>/&gt;</span>
+        &lt;Queen <span style="color: #10b981">Designz</span>/&gt;
       </div>
-
-      <nav class="navigation_nav desktop-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
-      </div>
-
-      <nav class="mobile-nav" id="mobile-nav">
-        <span class="close-mobile-nav" id="close-mobile-nav">&times;</span>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
-
-    <!-- Modal Navigation -->
-    <div id="navModal" class="modal">
-      <div class="modal-content">
-        <span class="close-button">×</span>
-        <nav class="modal-nav">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Projects</a>
-          <a href="#">Contact</a>
-        </nav>
-      </div>
+      <span class="close-mobile-nav" id="close-mobile-nav">&times;</span>
     </div>
+    <a href="#About">About</a>
+    <a href="#Projects">Projects</a>
+    <a href="#Testimonials">Testimonials</a>
+    <a href="#Contact">Contact</a>
+  </nav>
+</div>
+
 
     <section class="Hero" id="Home">
       <div class="Hero-txt">
         <h1>
-          Hi There, <br />I'm Queen
-          <span>Michael</span>
-        </h1>
-        <h3>I'm a Web Developer and Designer</h3>
+          Hi There, <br />I'm Queen Designz</h1>
+        <div class="text-animate">
+          <h3>I'm a <span> </span></h3>
+        </div>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed dolorem
-          explicabo totam libero atque ex ipsum dolor rem, laboriosam quod
-          accusamus esse dicta perferendis sapiente molestias fugit a illo quas.
+          As a full stack web developer, I embark on a journey where creativity
+          meets functionality, and innovation knows no bounds. From crafting
+          elegant user interfaces to architecting robust backend systems.
         </p>
         <button class="btn">Download CV</button>
+        <div class="home-sci">
+          <a href="https://web.facebook.com/chioma.michael.14606"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/08164922863"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/queen-michael-9a8626296/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
       </div>
       <div class="hero-images">
         <div class="my_pic">
           <img src="/assets/images/my_pic.png" alt="Image" class="main-pic" />
           <img
-            src="/assets/images/React.png"
+            src="/assets/images/react.svg"
             class="tech-icon react-icon"
             alt="React Logo"
           />
           <img
-            src="/assets/images/Tailwind Css.png"
+            src="/assets/images/NextJs.png"
             class="tech-icon tailwind-icon"
             alt="Tailwind Logo"
           />
           <img
-            src="/assets/images/NodeLogo.png"
+            src="/assets/images/Redux.png"
             class="tech-icon node-icon"
             alt="Node Logo"
           />
         </div>
-        <div class="social_icons">
-          <li><img src="/assets/images/facebook.png" alt="" /></li>
-          <li><img src="/assets/images/linkedin.png" alt="" /></li>
-          <li><img src="/assets/images/instagram.png" alt="" /></li>
-          <li><img src="/assets/images/twitter.png" alt="" /></li>
-        </div>
-      </div>
     </section>
 
     <section class="about" id="About">
@@ -204,7 +200,7 @@
       </div>
     </section>
 
-    <section class="project">
+    <section class="project" id="Projects">
       <div class="project_con">
         <div class="project_title">
           <h1>My Project</h1>
@@ -219,10 +215,12 @@
                 Professionalism and dedication to our project were outstanding.
               </p>
               <div class="project_btn">
-                <button class="livebtn">Live Preview</button>
+                <button class="livebtn"><a href="#">Live Preview</a></button>
                 <button>
-                  <img src="/assets/images/Github.png" alt="" />
+                  <a href="https://github.com/Chioma533/Portfolio">
+                    <img src="/assets/images/Github.png" alt="" />
                   <span>Github</span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -237,10 +235,12 @@
                 Professionalism and dedication to our project were outstanding.
               </p>
               <div class="project_btn">
-                <button class="livebtn">Live Preview</button>
+                <button class="livebtn"><a href="#">Live Preview</a></button>
                 <button>
-                  <img src="/assets/images/Github.png" alt="" />
+                  <a href="https://github.com/Chioma533/Portfolio">
+                    <img src="/assets/images/Github.png" alt="" />
                   <span>Github</span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -255,10 +255,12 @@
                 brought our vision to life with a modern and responsive website.
               </p>
               <div class="project_btn">
-                <button class="livebtn">Live Preview</button>
+                <button class="livebtn"><a href="#">Live Preview</a></button>
                 <button>
-                  <img src="/assets/images/Github.png" alt="" />
+                  <a href="https://github.com/Chioma533/Portfolio">
+                    <img src="/assets/images/Github.png" alt="" />
                   <span>Github</span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -273,10 +275,12 @@
                 brought our vision to life with a modern and responsive website
               </p>
               <div class="project_btn">
-                <button class="livebtn">Live Preview</button>
+                 <button class="livebtn"><a href="#">Live Preview</a></button>
                 <button>
-                  <img src="/assets/images/Github.png" alt="" />
+                  <a href="https://github.com/Chioma533/Portfolio">
+                    <img src="/assets/images/Github.png" alt="" />
                   <span>Github</span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -291,10 +295,12 @@
                 brought our vision to life with a modern and responsive website.
               </p>
               <div class="project_btn">
-                <button class="livebtn">Live Preview</button>
+                 <button class="livebtn"><a href="#">Live Preview</a></button>
                 <button>
-                  <img src="/assets/images/Github.png" alt="" />
+                  <a href="https://github.com/Chioma533/Portfolio">
+                    <img src="/assets/images/Github.png" alt="" />
                   <span>Github</span>
+                  </a>
                 </button>
               </div>
             </div>
@@ -346,7 +352,7 @@
       </div>
     </section> -->
 
-    <section class="Testimonials">
+    <section class="Testimonials" id="Testimonials">
       <div class="container">
         <div class="section-header">
           <h2 class="title">What our clients say</h2>
@@ -443,22 +449,22 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="Contact">
       <div class="container">
         <div>
           <h3>Get in Touch</h3>
           <p>I'm always open to new opportunities. Feel free to reach out!</p>
-          <div class="contact-icon">
-            <a href="#">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="#">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
+          <div class="home-sci">
+          <a href="https://web.facebook.com/chioma.michael.14606"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://wa.me/08164922863"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/queen-michael-9a8626296/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
           <div class="container-mail">
             <div class="mail">
               <div class="mail_back"></div>
@@ -515,12 +521,7 @@
                 required
               ></textarea>
             </div>
-            <button class="sendBtn" type="button">
-              <span class="sendBtn--visible">
-                <p>Send Message</p>
-              </span>
-              <span class="sendBtn--invisible">Message sent!</span>
-            </button>
+            <button class="sendBtn" id="sendBtn" type="button">Send Message</button>
           </form>
         </div>
       </div>
@@ -528,7 +529,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="" type="text/javascript"></script> -->
     <script src="/assets/Js/index.js"></script>
   </body>
 </html>
