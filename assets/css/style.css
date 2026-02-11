@@ -355,7 +355,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--text-color);
-  padding: 3px 10px;
+  padding: 3px 0;
   margin: 0 auto;
   text-align: left;
   max-width: 100%;
@@ -1258,37 +1258,27 @@ body {
     cursor: pointer;
     align-self: flex-end;
   }
-  .hero-images {
+
+  .my_pic {
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-  }
-
-  .hero-images .my_pic {
-    width: 60%;
-    justify-content: center;
-  }
-
-  .hero-images .my_pic .tech-icon {
-    width: 40px;
-    height: 40px;
-  }
-  .react-icon {
-    top: 210px;
-    right: 80%;
-  }
-  .tailwind-icon {
-    top: 350px;
-    left: 100%;
-  }
-  .node-icon {
-    top: 10px;
-    right: -10%;
+    text-align: center;
   }
   .my_pic .main-pic {
     position: relative;
+    width: 80%;
     z-index: 0;
+  }
+  .react-icon {
+    top: 200px;
+    right: 90%;
+  }
+  .tailwind-icon {
+    top: 500px;
+    left: 100%;
+  }
+  .node-icon {
+    top: 2px;
+    right: -10%;
   }
 }
 @media (max-width: 768px) and (max-width: 1024px) {
@@ -1314,21 +1304,16 @@ body {
   }
 
   .container-mail {
-    display: none; /* Optional: hide envelope on small screens */
+    display: none;
   }
 
   .Hero {
     flex-direction: column;
     padding: 2rem 1rem;
-    text-align: center;
   }
 
   .Hero-txt h1 {
     font-size: 2rem;
-  }
-
-  .Hero .home-sci {
-    justify-content: center;
   }
 
   .hero-images {
@@ -1342,7 +1327,7 @@ body {
   }
 
   .my_pic img.main-pic {
-    width: 70%;
+    width: 80%;
   }
   .react-icon {
     top: 120px;
@@ -1366,7 +1351,6 @@ body {
   .about_txt,
   .skill_con {
     width: 100%;
-    text-align: center;
   }
 
   .about_txt img {
@@ -1456,7 +1440,7 @@ body {
   .Hero {
     flex-direction: column;
     height: auto;
-    padding: 40px 5px;
+    padding: 40px 2px;
   }
   .Hero .hero-images {
     width: 90%;

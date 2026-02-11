@@ -42,7 +42,7 @@ const swiper = new Swiper(".js-testimonials-slider", {
   },
 });
 
-emailjs.init("nQ1fv-w8BLyrpfQtH");
+emailjs.init("-vUxzdSb_yQlvbAX6");
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Send form with EmailJS
     emailjs
-      .sendForm("service_3kdjn5r", "template_z2m82ir", form)
+      .sendForm("service_p2ty1in", "template_z2m82ir", form)
       .then(() => {
         // Toastify success
         Toastify({
